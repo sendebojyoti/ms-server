@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: ms-server
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - metrices
+          - circuitbreakers
+  health:
+    defaults:
+      enabled: true
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      productFallbackService:
+        #        slidingWindowSize: 5
+        #        permittedNumberOfCallsInHalfOpenState: 3
+        #        waitDurationInOpenState: 1s
+        #        failureRateThreshold: 50
+        registerHealthIndicator: true
+
