@@ -8,6 +8,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+   #  defaultZone: http://eureka-server:8761/eureka/
     healthcheck:
       enabled: true
 
@@ -42,4 +43,3 @@ resilience4j:
         #        waitDurationInOpenState: 1s
         #        failureRateThreshold: 50
         registerHealthIndicator: true
-
