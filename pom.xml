@@ -10,7 +10,7 @@
     </parent>
     <groupId>io.ms.server</groupId>
     <artifactId>ms-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>ms-server</name>
     <description>Demo project for Spring Boot</description>
     <url/>
